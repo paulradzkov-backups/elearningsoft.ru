@@ -1,0 +1,133 @@
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4 {
+	position:relative;
+}
+
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+}
+
+/* Grid >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.grid_base .grid_1 {
+	width:180px;
+}
+
+.grid_base .grid_2 {
+	width:400px;
+}
+
+.grid_base .grid_3 {
+	width:620px;
+}
+
+.grid_base .grid_4 {
+	width:840px;
+}
+
+
+
+
+/* Prefix Extra Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.grid_base .prefix_1 {
+	padding-left:220px;
+}
+
+.grid_base .prefix_2 {
+	padding-left:440px;
+}
+
+.grid_base .prefix_3 {
+	padding-left:660px;
+}
+
+
+
+/* Suffix Extra Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.grid_base .suffix_1 {
+	padding-right:220px;
+}
+
+.grid_base .suffix_2 {
+	padding-right:440px;
+}
+
+.grid_base .suffix_3 {
+	padding-right:660px;
+}
+
+
+
+/* Push Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.grid_base .push_1 {
+	left:220px;
+}
+
+.grid_base .push_2 {
+	left:440px;
+}
+
+.grid_base .push_3 {
+	left:660px;
+}
+
+
+
+/* Pull Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.grid_base .pull_1 {
+	left:-220px;
+}
+
+.grid_base .pull_2 {
+	left:-440px;
+}
+
+.grid_base .pull_3 {
+	left:-660px;
+}
+
+h1 {
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:-1pt;
+    line-height:120%;
+    color:#525261;
+    text-align:center;
+}

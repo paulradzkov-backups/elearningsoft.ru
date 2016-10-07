@@ -1,0 +1,102 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.wid_50 {
+	width: 45%;
+	margin: 0 2.5%;
+	float: left;
+}
+.wid_25 {
+	width: 20%;
+	margin: 0 2.5%;
+	float: left;
+}
+.testimonial {
+	font-family: "Lucida Sans Unicode";
+	min-width: 420px;
+	position:relative;
+	border: 5px solid #e0e0e0;
+	padding: 20px;
+	margin: 20px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-o-border-radius: 5px 5px 5px 5px;
+	border-radius:  5px 5px 5px 5px;
+	
+	-moz-box-shadow: 0px 2px 3px rgba(0,0,0,0.1), 0px 1px 7px rgba(0,0,0,0.05) inset, 0px 0px 2px 7px rgba(0,0,0,0.1) inset; /* Для Firefox */
+	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.1), 0px 1px 7px rgba(0,0,0,0.05) inset, 0px 0px 2px 7px rgba(0,0,0,0.1) inset; /* Для Safari и Chrome */
+	box-shadow: 0px 2px 3px rgba(0,0,0,0.1), 0px 1px 7px rgba(0,0,0,0.05) inset, 0px 0px 7px 2px rgba(0,0,0,0.1) inset; /* Параметры тени */
+
+	background: -moz-linear-gradient(top,  rgba(234,234,234,1) 0%, rgba(204,204,204,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(100%,rgba(204,204,204,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(204,204,204,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(204,204,204,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(204,204,204,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(234,234,234,1) 0%,rgba(204,204,204,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#00cccccc',GradientType=0 ); /* IE6-9 */
+
+
+}
+.testimonial:after {
+	content: "";
+	position: absolute;
+	height: 70px;
+	background: url(../img/bg_bottom.png);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-top: 2px solid #adadad;
+	z-index: -1;
+}
+.testimonial_caption h4 {
+	margin-top: 0;
+	font-size: 16px;
+}
+.testimonial_image {
+	position: absolute;
+	padding: 10px;
+	background: rgba(255,255,255,0.6);
+	width: 110px;
+	height: 100px;
+	bottom: 25px;
+	right: 25px;
+}
+.testimonial_image img {
+
+}
+.testimonial_text {
+	margin-bottom: 100px;
+	font-size: 14px;
+	color: #585757;
+}
+.testimonial_author, .testimonial_author_descr {
+	margin-right: 140px;
+	overflow:  hidden;
+	font-size: 13px;
+}
+.testimonial_author {
+	font-weight: bolder;
+}
+.testimonial_author a {
+	color: #2a2929;
+}
+.testimonial_author a:hover {
+	text-decoration: none;
+	color: #585757;
+}
+.testimonial_author_descr {
+	margin-top: 5px;
+	color: #fff;
+	text-shadow: 0px -1px 2px #000000;
+        filter: dropshadow(color=#000000, offx=0, offy=-1);
+}
+.imagelist{
+    
+    list-style: none;
+    }
+.imagelist li{
+       
+        margin: 3px;
+        float: left;
+        }

@@ -1,0 +1,85 @@
+/*  grid */
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4 {
+	position:relative;
+}
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
+
+/* Grid >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.grid_1 {width:180px;}
+.grid_2 {width:400px;}
+.grid_3 {width:620px;}
+.grid_4 {width:840px;}
+
+/* Prefix Extra Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.prefix_1 {padding-left:220px;}
+.prefix_2 {padding-left:440px;}
+.prefix_3 {padding-left:660px;}
+
+/* Suffix Extra Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.suffix_1 {padding-right:220px;}
+.suffix_2 {padding-right:440px;}
+.suffix_3 {padding-right:660px;}
+
+/* Push Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.push_1 {left:220px;}
+.push_2 {left:440px;}
+.push_3 {left:660px;}
+
+/* Pull Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.pull_1 {left:-220px;}
+.pull_2 {left:-440px;}
+.pull_3 {left:-660px;}
+
+/* css columns */
+.css-columns-1 {
+    margin: 0 20px;
+    -webkit-column-width: 180px;
+       -moz-column-width: 180px;
+            column-width: 180px;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+}
+.css-columns-2 {
+    margin: 0 20px;
+    -webkit-column-width: 400px;
+       -moz-column-width: 400px;
+            column-width: 400px;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+}
+
+.narrow-grid #system {
+  width: 630px;
+  float: none;
+  display: block;
+  margin: auto;
+}
+.grid_txt {
+  width: 630px;
+  float: none;
+  display: block;
+  margin: auto;
+}

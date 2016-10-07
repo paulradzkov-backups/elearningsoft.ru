@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700&amp;subset=cyrillic-ext,latin">
+<style>
+body {
+font-family: 'Open Sans',sans-serif;
+font-size: 14px;
+line-height: 1.4;
+color: #222;
+}
+label, input, button, select, textarea {
+font-size: 14px;
+font-weight: normal;
+line-height: 20px;
+}
+label {
+display: block;
+margin-bottom: 5px;
+}
+.clearfix:before, .clearfix:after {
+display: table;
+content: "";
+line-height: 0;
+}
+.clearfix:after {
+clear: both;
+}
+.grid_1, .grid_2, .grid_3, .grid_4 {
+display: inline;
+float: left;
+position: relative;
+margin-left: 20px;
+margin-right: 20px;
+}
+.omega {
+margin-right: 0;
+}
+.alpha {
+margin-left: 0;
+}
+.grid_3 {
+width: 620px;
+}
+.grid_1 {
+width: 180px;
+}
+button, input, select, textarea {
+margin: 0;
+height: 30px;
+font-size: 13px;
+line-height: 1;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+width:206px;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+background-color: #fff;
+border: 1px solid #ccc;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-webkit-transition: border linear .2s, box-shadow linear .2s;
+-moz-transition: border linear .2s, box-shadow linear .2s;
+-o-transition: border linear .2s, box-shadow linear .2s;
+transition: border linear .2s, box-shadow linear .2s;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+margin: 0;
+border: 1px solid #EEE;
+border-radius: 2px;
+padding: 5px;
+height: 30px;
+line-height: 1em;
+}
+.smartresponder input[type="text"] {
+width: 100%;
+padding: 10px;
+height: 40px;
+font-size: 14px;
+color: #000;
+border-color: #EEE !important;
+}
+div.contact-form-row {
+margin: 20px 0;
+display:block;
+}
+.contact-form-label {
+padding: 10px 0;
+text-align: right;
+font-weight: 600;
+margin-right: 20px;
+}
+#cnt {
+line-height: 40px;
+}
+.action-button {
+display: inline-block;
+border: 1px solid #de890a;
+border-radius: 3px;
+padding: 9px 15px;
+color: #FFF;
+text-shadow: -1px -1px 0 #e8920f;
+text-decoration: none;
+font-weight: 600;
+background: #f8b904;
+box-shadow: 0px 3px 3px -1px rgba(0,0,0,0.1);
+background: -moz-linear-gradient(left, #f3a60b 0%, #f8b804 35%, #ed9611 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f3a60b), color-stop(35%,#f8b804), color-stop(100%,#ed9611));
+background: -webkit-linear-gradient(left, #f3a60b 0%,#f8b804 35%,#ed9611 100%);
+background: -o-linear-gradient(left, #f3a60b 0%,#f8b804 35%,#ed9611 100%);
+background: -ms-linear-gradient(left, #f3a60b 0%,#f8b804 35%,#ed9611 100%);
+background: linear-gradient(to right, #f3a60b 0%,#f8b804 35%,#ed9611 100%);
+}
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+cursor: pointer;
+}
+input, button, select, textarea {
+font-family: 'Open Sans',sans-serif;
+}
+.smartresponder .action-button {
+width: 100%;
+padding: 10px;
+height: 40px;
+font-size: 14px;
+cursor: pointer;
+}
+.action-button:hover {
+color: #FFF;
+text-decoration: none;
+box-shadow: 0px 4px 3px -1px rgba(0,0,0,0.15);
+}
+form {
+    display: block;
+    margin: 0 0 20px;
+}
+.grid_2 {
+width: 400px;
+}
+div {
+display: block;
+}
+.prefix_1 {
+padding-left: 220px;
+}
+</style>
+</head>
+<body>
+<div class="smartresponder"><script type="text/javascript" src="https://imgs.smartresponder.ru/forms/additional_files/smart-script.js"></script><script type="text/javascript" src="media/com_smartresponder/for_form.js"></script>
+	<form action="https://smartresponder.ru/subscribe.html" class="sr-box clearfix" data-trigger="focusin focusout" data-validate="parsley" method="post" name="SR_form" target="_blank">
+		<div class="sr-box-list ui-sortable grid_3 alpha"><input name="element_header" type="hidden" value="" />
+			<div class="fields contact-form-row clearfix"><label class="contact-form-label grid_1 alpha">Ваше имя:</label>
+				<div class="contact-form-input grid_2 omega"><input class="sr-required grid_2" data-required="true" name="field_name_first" type="text" value="" /></div>
+			</div>
+
+			<div class="fields contact-form-row clearfix"><label class="contact-form-label grid_1 alpha">Ваш email:</label>
+
+				<div class="contact-form-input grid_2 omega"><input class="sr-required" data-required="true" data-type="email" name="field_email" type="text" value="" /></div>
+			</div>
+
+			<div class="fields contact-form-row clearfix">
+				<div class="grid_1 alpha prefix_1" id="counter_li">
+					<div id="cnt">Подписчиков <img src="http://smartresponder.ru/dcounter/59915_1106626753_43989_1_verdana_10_ada6ad_0ffffff_right/counter.gif" style="vertical-align: middle; " /></div>
+				</div>
+
+				<div class="subscribe grid_1 omega"><input class="action-button" disabled="disabled" name="subscribe" type="submit" value="Подписаться" /></div>
+			</div>
+		</div>
+
+		<div class="grid_1 omega">
+			<p style="font-size: 13px; margin-top: 20px;">В рассылке мы пишем о последних тенденциях в сфере eLearning.<br />
+				Письма будут приходить не чаще двух раз в месяц.<br />
+				Подпишитесь на рассылку, чтобы первыми узнавать об обновлениях наших продуктов.</p>
+		</div>
+		<input name="uid" type="hidden" value="59915" /> <input name="did[]" type="hidden" value="43989" /> <input name="for_openType" type="hidden" value="Спасибо! Проверьте свой email и подтвердите подписку" /> <input name="tid" type="hidden" value="150689" /></form>
+</div>
+</body>
+</html>

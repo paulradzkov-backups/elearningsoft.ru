@@ -1,0 +1,106 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600&subset=cyrillic-ext,latin);
+body { font-family: 'Open Sans', sans-serif; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-family: 'Open Sans', sans-serif; font-weight: 600;}
+b, strong {
+    font-weight: 600;
+}
+html
+{
+	/* #3658: [IE6] Editor document has horizontal scrollbar on long lines
+	To prevent this misbehavior, we show the scrollbar always */
+	_overflow-y: scroll
+}
+
+img:-moz-broken
+{
+	-moz-force-broken-image-icon : 1;
+	width : 24px;
+	height : 24px;
+}
+img, input, textarea
+{
+	cursor: default;
+}
+
+body {
+    max-width:880px;
+    min-width:800px;
+    margin: 20px auto;
+    background: #FFF;
+}
+
+/*  grid */
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4 {
+	position:relative;
+}
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
+
+/* Grid >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.grid_1 {width:180px;}
+.grid_2 {width:400px;}
+.grid_3 {width:620px;}
+.grid_4 {width:840px;}
+
+/* Prefix Extra Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.prefix_1 {padding-left:220px;}
+.prefix_2 {padding-left:440px;}
+.prefix_3 {padding-left:660px;}
+
+/* Suffix Extra Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.suffix_1 {padding-right:220px;}
+.suffix_2 {padding-right:440px;}
+.suffix_3 {padding-right:660px;}
+
+/* Push Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.push_1 {left:220px;}
+.push_2 {left:440px;}
+.push_3 {left:660px;}
+
+/* Pull Space >> 4 Columns
+----------------------------------------------------------------------------------------------------*/
+.pull_1 {left:-220px;}
+.pull_2 {left:-440px;}
+.pull_3 {left:-660px;}
+
+body {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #646472;
+}
+h1 {
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:-1pt;
+    line-height:120%;
+    color:#525261;
+    text-align:center;
+}
+p {
+    margin: 20px 0;
+}

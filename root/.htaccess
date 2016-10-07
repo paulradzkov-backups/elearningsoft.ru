@@ -1,0 +1,429 @@
+##
+# @package		Joomla
+# @copyright	Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.
+# @license		GNU General Public License version 2 or later; see LICENSE.txt
+##
+
+##
+# READ THIS COMPLETELY IF YOU CHOOSE TO USE THIS FILE!
+#
+# The line just below this section: 'Options +FollowSymLinks' may cause problems
+# with some server configurations.  It is required for use of mod_rewrite, but may already
+# be set by your server administrator in a way that dissallows changing it in
+# your .htaccess file.  If using it causes your server to error out, comment it out (add # to
+# beginning of line), reload your site in your browser and test your sef url's.  If they work,
+# it has been set by your server administrator and you do not need it set here.
+##
+
+## Can be commented out if causes errors, see notes above.
+#Options +FollowSymLinks
+
+## Mod_rewrite in use.
+
+RewriteEngine On
+
+## Begin - Rewrite rules to block out some common exploits.
+# If you experience problems on your site block out the operations listed below
+# This attempts to block the most common type of exploit `attempts` to Joomla!
+#
+# Block out any script trying to base64_encode data within the URL.
+RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
+# Block out any script that includes a <script> tag in URL.
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+# Block out any script trying to set a PHP GLOBALS variable via URL.
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Block out any script trying to modify a _REQUEST variable via URL.
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Return 403 Forbidden header and show the content of the root homepage
+RewriteRule .* index.php [F]
+#
+## End - Rewrite rules to block out some common exploits.
+
+## Begin - Custom redirects
+#
+# If you need to redirect some pages, or set a canonical non-www to
+# www redirect (or vice versa), place that code here. Ensure those
+# redirects use the correct RewriteRule syntax and the [R=301,L] flags.
+
+#RewriteCond %{HTTP_HOST} ^www.elearningsoft.ru
+#RewriteRule ^(.*)$ http://elearningsoft.ru/$1 [R=permanent,L]
+
+# Rewrite old urls to new urls
+RewriteRule ^produkty.html$ 															products [R=301,L]
+
+	RewriteRule ^sharepoint-lms.html$ 														products/sharepointlms [R=301,L]
+	RewriteRule ^produkti-uslugi/sistema-distantsionnogo-obucheniya-sharepointlms.html$ 	products/sharepointlms [R=301,L]
+
+		RewriteRule ^produkti-uslugi/hr-otsenka-i-razvitie-personala.html$						products/sharepointlms/hr-module [R=301,L]
+		RewriteRule ^mobilnaya-versiya-sharepoint-lms.html$										products/sharepointlms/mobile-version [R=301,L]
+		RewriteRule ^produkti-uslugi/integratsiya-s-ms-office-365.html$							products/sharepointlms/office-365-integration [R=301,L]
+		RewriteRule ^modul-registratsii-na-sayte-i-zachisleniya-na-kursi-sharepoint-rem.html$	products/sharepointlms/rem-module [R=301,L]
+		RewriteRule ^modul-elektronnoe-portfolio-dlya-SharePoint.html$ 							products/sharepointlms/e-portfolio [R=301,L]
+		RewriteRule ^produkti-uslugi/udalenniy-proigrivatel-kursov-iz-sdo-offline-player.html$	products/sharepointlms/offline-player [R=301,L]
+
+	RewriteRule ^joomla-lms.html$ 															products/joomlalms [R=301,L]
+	RewriteRule ^vozmozhnosti-novoy-1-0-7-versii-produkta-joomlalms.html$ 					products/joomlalms [R=301,L]
+
+	RewriteRule ^quizforce.html$ 																		products/quizforce [R=301,L]
+	RewriteRule ^produkti-uslugi/quizforce-instrument-dlya-sozdaniya-testov-i-oprosov-na-flash.html$ 	products/quizforce [R=301,L]
+
+	RewriteRule ^wordforce.html$ 																				products/wordforce [R=301,L]
+	RewriteRule ^produkti-uslugi/wordforce-instrument-dlya-preobrazovaniya-word-dokumentov-v-veb-format.html$ 	products/wordforce [R=301,L]
+
+	RewriteRule ^powerpointforce.html$ 																		products/powerpointforce [R=301,L]
+	RewriteRule ^produkti-uslugi/powerpointforce-instrument-dlya-preobrazovaniya-powerpoint-vo-flash.html$ 	products/powerpointforce [R=301,L]
+
+	RewriteRule ^products/joomla-components$ 												products [R=301,L]
+	RewriteRule ^professionalnye-instrumenty-dlya-sozdaniya-kontenta-sdo.html$ 				products [R=301,L]
+	RewriteRule ^komponenty-dlya-e-learning.html$ 											products [R=301,L]
+	RewriteRule ^sistemi-distancionnogo-obucheniya.html$ 									products [R=301,L]
+				
+		RewriteRule ^survey-force-deluxe-dlya-joomla-instrument-dlya-provedeniya-oprosov.html$ 	products/joomla-components/surveyforce [R=301,L]
+		RewriteRule ^quiz-deluxe-dlya-joomla-instrument-dlya-sozdaniya-online-testov.html$ 		products/joomla-components/joomlaquiz [R=301,L]
+		RewriteRule ^joomla-live-conference.html$ 												products/joomla-components/conference [R=301,L]
+		RewriteRule ^komponent-joomla-drag-drop.html$ 											products/joomla-components/draganddrop [R=301,L]
+		RewriteRule ^komponent-joomla-flash-magazine.html$ 										products/joomla-components/flashmagazine [R=301,L]
+		RewriteRule ^integratsiya-joomlalms-virtuemart.html$ 									products/joomla-components/virtuemart [R=301,L]
+		RewriteRule ^plagin-dlya-integratsii-joomlalms-jcomments.html$ 							products/joomla-components/jcomments [R=301,L]
+		RewriteRule ^plagin-dlya-integratsii-joomlalms-jreviews.html$ 							products/joomla-components/jreviews [R=301,L]
+		RewriteRule ^sef-plagini-joomlalms.html$ 												products/joomla-components/sefplugins [R=301,L]
+		RewriteRule ^tsentr-sertifikatov-joomlalms.html$ 										products/joomla-components/sertificates [R=301,L]
+		RewriteRule ^produkti-uslugi/joomlalms-community-profayl.html$ 							products/joomla-components/community [R=301,L]
+
+RewriteRule ^elearningblog.html$ 							blog [R=301,L]
+
+	RewriteRule ^elearningblog/chto-takoe-sistema-distancionnogo-obuchenia.html$ blog/what-is-lms [R=301,L]
+	RewriteRule ^uchrezhdeniyam-obrazovaniya.html$ 			blog/lms-for-education [R=301,L]
+	RewriteRule ^kompaniyam-i-predpriyatiyam.html$ 			blog/lms-for-companies [R=301,L]
+	RewriteRule ^uchebnym-centram.html$ 					blog/lms-for-training-centers [R=301,L]
+	RewriteRule ^gosudarstvennym-strukturam.html$ 			blog/lms-for-goverment [R=301,L]
+	RewriteRule ^elearningblog/kakie-sistemi-upravlenia-kontentom-s-otkritim-kodom-ispolzuyt-popularnie-obrazovatelnie-saiti.html$		blog/80-kakie-sistemi-upravlenia-kontentom-s-otkritim-kodom-ispolzuyt-popularnie-obrazovatelnie-saiti [R=301,L]
+	RewriteRule ^elearningblog/articulate-presenter-i-joomlalms-sovmestimost.html$				blog/83-articulate-presenter-09-joomlalms [R=301,L]	
+	RewriteRule ^elearningblog/Instrument-programma-obuchenia-v-joomlalms.html$					blog/40-instrument-programma-obuchenia-v-joomlalms [R=301,L]
+	RewriteRule ^elearningblog/ispolzovanie-scorm-ot-adobe-captivate-dlya-joomlalms.html$		blog/67-ispolzovanie-scorm-ot-adobe-captivate-dlya-joomlalms [R=301,L]
+	RewriteRule ^elearningblog/joomlalms-dlya-medicinskoy-sertifikacii.html$					blog/66-joomlalms-dlya-medicinskoy-sertifikacii [R=301,L]
+	RewriteRule ^elearningblog/6-sovetov-kak-podtolknut-studentov-zanimatsa-sverh-kursa.html$	blog/65-6-sovetov-kak-podtolknut-studentov-zanimatsa-sverh-kursa [R=301,L]
+	RewriteRule ^elearningblog/eksperti-brandon-hall-group-otsenili-sdo-joomlalms.html$			blog/64-eksperti-brandon-hall-group-otsenili-sdo-joomlalms [R=301,L]
+	RewriteRule ^elearningblog/sozdanie-testov-v-joomlalms.html$								blog/41-sozdanie-testov-v-joomlalms [R=301,L]			
+	RewriteRule ^elearningblog/poshagovoe-dobavlenie-materiala-v-sdo-joomlalms.html$			blog/42-poshagovoe-dobavlenie-materiala-v-sdo-joomlalms [R=301,L]
+	RewriteRule ^elearningblog/jreviews-joomlalms.html$											blog/63-jreviews-joomlalms [R=301,L]
+	RewriteRule ^elearningblog/kak-pravilno-dobavit-content-v-kursi-joomlalms-iz-word.html$		blog/43-kak-pravilno-dobavit-content-v-kursi-joomlalms-iz-word [R=301,L]
+	RewriteRule ^elearningblog/mnogoprofilnaja-sertifikacija-v-joomlalms.html$					blog/44-mnogoprofilnaja-sertifikacija-v-joomlalms [R=301,L]
+	RewriteRule ^elearningblog/varianti-nastrojki-polzovatelskogo-interfejsa-v-JoomlaLMS.html$	blog/45-varianti-nastrojki-polzovatelskogo-interfejsa-v-joomlalms [R=301,L]
+	RewriteRule ^elearningblog/stimulirovanie-korporativnogo-obucheniya.html$					blog/62-stimulirovanie-korporativnogo-obucheniya [R=301,L]
+	RewriteRule ^elearningblog/obushenie-na-base-lms.html$										blog/61-obushenie-na-base-lms [R=301,L]
+	RewriteRule ^elearningblog/online-testirovanie-sotrudnikov.html$							blog/60-online-testirovanie-sotrudnikov [R=301,L]
+	RewriteRule ^elearningblog/korporativnoe-obuchenie-na-baze-lms.html$						blog/59-korporativnoe-obuchenie-na-baze-lms [R=301,L]
+	RewriteRule ^elearningblog/online-courses-joomlalms.html$									blog/46-online-courses-joomlalms [R=301,L]
+	RewriteRule ^elearningblog/chto-takoe-sistema-distancionnogo-obuchenia.html$				blog/what-is-lms [R=301,L]
+	RewriteRule ^elearningblog/vnedrenie_okupaemost_sdo.html$									blog/57-vnedrenie-okupaemost-sdo [R=301,L]
+	RewriteRule ^elearningblog/scorm-ms-power-point.html$										blog/47-scorm-ms-power-point [R=301,L]										
+	RewriteRule ^elearningblog/joomla-lms-languages-courses.html$								blog/56-joomla-lms-languages-courses [R=301,L]
+	RewriteRule ^elearningblog/joomlalms-testirovanie.html$										blog/55-joomlalms-testirovanie [R=301,L]
+	RewriteRule ^elearningblog/joomlalms-v-pomosh-repetitoru.html$								blog/54-joomlalms-v-pomosh-repetitoru [R=301,L]
+	RewriteRule ^elearningblog/lms-dlya-lyudej-s-ogranichennymi-vozmozhnostyami.html$			blog/53-lms-dlya-lyudej-s-ogranichennymi-vozmozhnostyami [R=301,L]
+	RewriteRule ^elearningblog/internet-i-obuchenie-v-Amerike-uspechnoe-sovmechenie.html$		blog/52-internet-i-obuchenie-v-amerike-uspechnoe-sovmechenie [R=301,L]
+	RewriteRule ^elearningblog/Obuchenie-cherez-internet-eto-vozmojno.html$						blog/51-obuchenie-cherez-internet-eto-vozmojno [R=301,L]
+	RewriteRule ^elearningblog/sistemi-distancionnogo-obuchenia-korporativniy-vzgliad.html$		blog/50-sistemi-distancionnogo-obuchenia-korporativniy-vzgliad [R=301,L]
+	RewriteRule ^elearningblog/vvedenie-v-electronnoe-obuchenie.html$							blog/49-vvedenie-v-electronnoe-obuchenie [R=301,L]
+	RewriteRule ^elearningblog/chto-takoe-e-learning.html$										blog/48-chto-takoe-e-learning [R=301,L]
+								
+
+
+RewriteRule ^o-kompanii.html$ 								company [R=301,L]
+RewriteRule ^kontakt.html$ 									company [R=301,L]
+RewriteRule ^otpravit-zapros.html$ 							company [R=301,L]
+
+	RewriteRule ^novosti.html$ 								company/news [R=301,L]
+
+		RewriteRule ^novosti/novaya-versiya-joomlalms-teper-sovmestima-s-joomla-3-x-cms.html$ 					company/news/81-joomlalms-sovmestima-s-joomla-3x [R=301,L]
+		RewriteRule ^novosti/obnovleniya-sistemi-distantsionnogo-obucheniya-sharepointlms.html$ 				company/news/82-noviye-vozmozhnosti-sdo-sharepointlms [R=301,L]
+		RewriteRule ^novosti/anons-vihoda-paneli-upravleniya-dlya-sharepoint.html$ 								company/news/22-l-r-sharepoint [R=301,L]
+		RewriteRule ^novosti/vichod-versii-3-2-sdo-sharepointlms-i-versii-4-modulya-registratsii-rem.html$ 		company/news/23-vihod-sharepointlms-3-2-i-modulya-sharepoint-rem-4 [R=301,L]
+		RewriteRule ^novosti/udalenniy-proigrivatel-kursov-offline-player.html$ 								company/news/24-qoffline-playerq [R=301,L]
+		RewriteRule ^novosti/s-novim-2013-godom.html$ 															company/news/25-2013 [R=301,L]
+		RewriteRule ^novosti/hr-modul-otsenki-i-razvitiya-personala.html$ 										company/news/26-hr-modul-otsenki-i-razvitiya-personala [R=301,L]
+		RewriteRule ^novosti/ne-upustite-svoy-shans-poluchit-20-skidku-ot-elearningsoft-na-vistavke-edutech-russia-2012-9-10-oktyabrya.html$ 									company/news/27-20-elearningsoft-qedutech-russia-2012q-9-10 [R=301,L]
+		RewriteRule ^novosti/mobilnaya-versiya-sharepointlms.html$ 												company/news/28-sharepointlms-mobilnaya-versiya [R=301,L]
+		RewriteRule ^novosti/novaya-versiya-joomlalms-teper-sovmestima-s-joomla-cms-2-5.html$					company/news/29-versiya-joomlalms-25-dlya-joomla-25 [R=301,L]
+		RewriteRule ^novosti/vishla-novaya-versiya-sistemi-distantsionnogo-obucheniya-sharepointlms.html$ 		company/news/30-sharepointlms [R=301,L]
+		RewriteRule ^novosti/videokonferentssvyaz-na-osnove-microsoft-lync-server-2010-v-belorusskom-gosudarstvennom-universitete-informatiki-i-radioelektroniki-bguir.html$ 	company/news/32-videokkonferentzsvyaz-na-baze-microsoft-lync-server-2010-v-bguire [R=301,L]
+		RewriteRule ^novosti/anons-novich-versiy-sharepointlms-i-obnovleniy-avtorskich-instrumentov-po-sozdaniiu-kontenta-wordforce-quizforce-powerpointforce.html$ 			company/news/33-novie-versii-sharepointlms-dlya-server-2010-i-2007 [R=301,L]
+		RewriteRule ^novosti/joomlalms-1-2-0.html$ 																company/news/34-joomlalms-1-2-0 [R=301,L]
+		RewriteRule ^novosti/joomlalms-1-1.html$ 																company/news/35-joomlalms-1-1 [R=301,L]
+
+	RewriteRule ^nashi-klienty-i-ih-otzyvy.html$ 			company/clients [R=301,L]
+	RewriteRule ^klienty-sharepoint-lms.html$ 				company/clients [R=301,L]
+	RewriteRule ^klienti-joomlalms.html$ 					company/clients [R=301,L]
+	RewriteRule ^otzivi-o-sharepointlms.html$ 				company/testimonials [R=301,L]
+	RewriteRule ^otzivi-o-joomlalms.html$ 					company/testimonials [R=301,L]
+
+		RewriteRule otzivi/minskiy-filial-mesi.html$		company/testimonials/mfmesi-ru [R=301,L]
+		RewriteRule otzivi/skive-business-college.html$		company/testimonials/sharepointlms-in-skive-business-college [R=301,L]
+		RewriteRule otzivi/fl-smidth.html$					company/testimonials [R=301,L]
+		RewriteRule otzivi/web-jive.html$					company/testimonials [R=301,L]
+		RewriteRule otzivi/web-foundry-ltd.html$			company/testimonials [R=301,L]
+		RewriteRule otzivi/image-works-media.html$			company/testimonials [R=301,L]
+		RewriteRule otzivi/next-digital.html$				company/testimonials [R=301,L]
+		RewriteRule otzivi/the-dental-channel-ltd.html$		company/testimonials/dental-channel [R=301,L]
+		RewriteRule otzivi/elearning-at-the-fca.html$		company/testimonials/elearning-thefca [R=301,L]
+		RewriteRule otzivi/lejoslearning.html$				company/testimonials [R=301,L]
+		RewriteRule otzivi/learning-agency.html$			company/testimonials [R=301,L]
+		RewriteRule otzivi/contractor-licensing.html$		company/testimonials [R=301,L]
+
+	RewriteRule ^uslugi.html$ 								company/services [R=301,L]
+	RewriteRule ^priglashaem-k-sotrudnichestvu.html$ 		company/partnerprogram [R=301,L]
+	RewriteRule ^informatsiya/partneri.html$ 				company/partners [R=301,L]
+
+		RewriteRule ^partneri/enigma-enter.html$ 						company/partners [R=301,L]
+		RewriteRule ^partneri/minskiy-filial-mesi.html$ 				company/partners [R=301,L]
+		RewriteRule ^informatsiya/bazovaya-organizatsiya.html$ 			company/partners [R=301,L]
+		RewriteRule ^partneri/ittera.html$ 								company/partners [R=301,L]
+		RewriteRule ^partneri/moskovskiy-institut-ekonomiki-menedzhmenta-i-prava-sayt-distantsionnogo-obrucheniya-miemp.html$ company/partners [R=301,L]
+		RewriteRule ^partneri/zao-polibuk-multimedia.html$ 				company/partners [R=301,L]
+		RewriteRule ^partneri/rosbiznessoft.html$ 						company/partners [R=301,L]
+		RewriteRule ^partneri/nii-do.html$ 								company/partners [R=301,L]
+
+
+RewriteRule ^joomlalms-demo.html$	lms [R=301,L]
+## End - Custom redirects
+
+##
+# Uncomment following line if your webserver's URL
+# is not directly related to physical file paths.
+# Update Your Joomla! Directory (just / for root).
+##
+
+RewriteBase /elearningsoft/
+
+## Begin - Joomla! core SEF Section.
+#
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#
+# If the requested path and file is not /index.php and the request
+# has not already been internally rewritten to the index.php script
+RewriteCond %{REQUEST_URI} !^/index\.php
+# and the request is for something within the component folder,
+# or for the site root, or for an extensionless URL, or the
+# requested URL ends with one of the listed extensions
+RewriteCond %{REQUEST_URI} /component/|(/[^.]*|\.(php|html?|feed|pdf|vcf|raw))$ [NC]
+# and the requested path and file doesn't directly match a physical file
+RewriteCond %{REQUEST_FILENAME} !-f
+# and the requested path and file doesn't directly match a physical folder
+RewriteCond %{REQUEST_FILENAME} !-d
+# internally rewrite the request to the index.php script
+RewriteRule .* index.php [L]
+#
+## End - Joomla! core SEF Section.
+
+#php.ini override
+php_value max_upload_size 64m
+
+
+# ##############################################################################
+# # INTERNET EXPLORER                                                          #
+# ##############################################################################
+
+# ------------------------------------------------------------------------------
+# | Better website experience                                                  |
+# ------------------------------------------------------------------------------
+
+# Force IE to render pages in the highest available mode in the various
+# cases when it may not: http://hsivonen.iki.fi/doctype/ie-mode.pdf.
+
+<IfModule mod_headers.c>
+    Header set X-UA-Compatible "IE=edge"
+    # `mod_headers` can't match based on the content-type, however, we only
+    # want to send this header for HTML pages and not for the other resources
+    <FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
+        Header unset X-UA-Compatible
+    </FilesMatch>
+</IfModule>
+
+# ##############################################################################
+# # MIME TYPES AND ENCODING                                                    #
+# ##############################################################################
+
+# ------------------------------------------------------------------------------
+# | Proper MIME types for all files                                            |
+# ------------------------------------------------------------------------------
+
+<IfModule mod_mime.c>
+
+  # Audio
+    AddType audio/mp4                                   m4a f4a f4b
+    AddType audio/ogg                                   oga ogg
+
+  # JavaScript
+    # Normalize to standard type (it's sniffed in IE anyways):
+    # http://tools.ietf.org/html/rfc4329#section-7.2
+    AddType application/javascript                      js
+    AddType application/json                            json
+
+  # Video
+    AddType video/mp4                                   mp4 m4v f4v f4p
+    AddType video/ogg                                   ogv
+    AddType video/webm                                  webm
+    AddType video/x-flv                                 flv
+
+  # Web fonts
+    AddType application/font-woff                       woff
+    AddType application/vnd.ms-fontobject               eot
+
+    # Browsers usually ignore the font MIME types and sniff the content,
+    # however, Chrome shows a warning if other MIME types are used for the
+    # following fonts.
+    AddType application/x-font-ttf                      ttc ttf
+    AddType font/opentype                               otf
+
+    # Make SVGZ fonts work on iPad:
+    # https://twitter.com/FontSquirrel/status/14855840545
+    AddType     image/svg+xml                           svg svgz
+    AddEncoding gzip                                    svgz
+
+  # Other
+    AddType application/octet-stream                    safariextz
+    AddType application/x-chrome-extension              crx
+    AddType application/x-opera-extension               oex
+    AddType application/x-shockwave-flash               swf
+    AddType application/x-web-app-manifest+json         webapp
+    AddType application/x-xpinstall                     xpi
+    AddType application/xml                             atom rdf rss xml
+    AddType image/webp                                  webp
+    AddType image/x-icon                                ico
+    AddType text/cache-manifest                         appcache manifest
+    AddType text/vtt                                    vtt
+    AddType text/x-component                            htc
+    AddType text/x-vcard                                vcf
+
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# | UTF-8 encoding                                                             |
+# ------------------------------------------------------------------------------
+
+# Use UTF-8 encoding for anything served as `text/html` or `text/plain`.
+AddDefaultCharset utf-8
+
+# Force UTF-8 for certain file formats.
+<IfModule mod_mime.c>
+    AddCharset utf-8 .atom .css .js .json .rss .vtt .webapp .xml
+</IfModule>
+
+# ##############################################################################
+# # WEB PERFORMANCE                                                            #
+# ##############################################################################
+
+# ------------------------------------------------------------------------------
+# | Compression                                                                |
+# ------------------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+
+    # Force compression for mangled headers.
+    # http://developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+
+    # Compress all output labeled with one of the following MIME-types
+    # (for Apache versions below 2.3.7, you don't need to enable `mod_filter`
+    #  and can remove the `<IfModule mod_filter.c>` and `</IfModule>` lines
+    #  as `AddOutputFilterByType` is still in the core directives).
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE application/atom+xml \
+                                      application/javascript \
+                                      application/json \
+                                      application/rss+xml \
+                                      application/vnd.ms-fontobject \
+                                      application/x-font-ttf \
+                                      application/x-web-app-manifest+json \
+                                      application/xhtml+xml \
+                                      application/xml \
+                                      font/opentype \
+                                      image/svg+xml \
+                                      image/x-icon \
+                                      text/css \
+                                      text/html \
+                                      text/plain \
+                                      text/x-component \
+                                      text/xml
+    </IfModule>
+
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# | ETag removal                                                               |
+# ------------------------------------------------------------------------------
+
+# Since we're sending far-future expires headers (see below), ETags can
+# be removed: http://developer.yahoo.com/performance/rules.html#etags.
+
+# `FileETag None` is not enough for every server.
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+
+FileETag None
+
+# ------------------------------------------------------------------------------
+# | Expires headers (for better cache control)                                 |
+# ------------------------------------------------------------------------------
+
+# The following expires headers are set pretty far in the future. If you don't
+# control versioning with filename-based cache busting, consider lowering the
+# cache time for resources like CSS and JS to something like 1 week.
+
+<IfModule mod_expires.c>
+
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+
+  # CSS
+    ExpiresByType text/css                              "access plus 1 year"
+
+  # Data interchange
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+
+  # Favicon (cannot be renamed!)
+    ExpiresByType image/x-icon                          "access plus 1 week"
+
+  # HTML components (HTCs)
+    ExpiresByType text/x-component                      "access plus 1 month"
+
+  # HTML
+    ExpiresByType text/html                             "access plus 0 seconds"
+
+  # JavaScript
+    ExpiresByType application/javascript                "access plus 1 year"
+
+  # Manifest files
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+  # Media
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+
+  # Web feeds
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+
+  # Web fonts
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+    ExpiresByType font/opentype                         "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+
+</IfModule>

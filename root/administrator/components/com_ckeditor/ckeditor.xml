@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<extension version="3.0" type="component" method="upgrade">
+		<name>CKEditor</name>
+		<creationDate>2013-01-03</creationDate>
+		<author>CKSource.com</author>
+		<authorUrl>http://cksource.com</authorUrl>
+		<copyright>Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved. For licensing, see LICENSE.html or	http://ckeditor.com/license</copyright>
+		<license>GPL</license>
+		<version>3.0</version>
+		<description>CKEditor component integrates CKEditor, a WYSIWYG online editor, with the link browser plugin and CKFinder configuration options.</description>
+
+		<scriptfile>install_ckeditor.php</scriptfile>
+
+		<install>
+			<sql>
+				<file charset="utf8" driver="mysql">install_ckeditor.sql</file>
+			</sql>
+		</install>
+		
+		<uninstall>
+			<sql>
+				<file charset="utf8" driver="mysql">uninstall_ckeditor.sql</file>
+			</sql>
+		</uninstall>
+
+		<files folder="site">
+			<file>index.html</file>
+			<file>ckeditor.php</file>
+			<file>editor.php</file>
+		</files>
+		
+		<languages folder="language/en-GB">
+			<language tag="en-GB" client="site">en-GB.plg_editors_ckeditor.ini</language>
+			<language tag="en-GB" client="site">en-GB.plg_editors_ckeditor.sys.ini</language>
+			<language tag="en-GB" client="site">en-GB.com_ckeditor.sys.ini</language>
+			<language tag="en-GB" client="site">en-GB.com_ckeditor.ini</language>
+		</languages>
+
+		<administration>
+			<menu img="components/com_ckeditor/images/ckeditor_ico16.png" link="option=com_ckeditor">COM_CKEDITOR_MENU_NAME</menu>
+			
+			<files folder="admin">
+				<folder>images</folder>
+				<folder>config</folder>
+				<folder>media</folder>
+				<file>index.html</file>
+				<file>ckeditor.php</file>
+				<file>editor.php</file>
+				<file>config.xml</file>
+				<file>install_ckeditor.sql</file>
+				<file>uninstall_ckeditor.sql</file>
+			</files>
+
+			<languages folder="language/en-GB">
+				<language tag="en-GB">en-GB.plg_editors_ckeditor.ini</language>
+				<language tag="en-GB">en-GB.plg_editors_ckeditor.sys.ini</language>
+				<language tag="en-GB">en-GB.com_ckeditor.sys.ini</language>
+				<language tag="en-GB">en-GB.com_ckeditor.ini</language>
+			</languages>
+		</administration>
+	</extension>

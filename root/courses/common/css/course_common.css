@@ -1,0 +1,341 @@
+@charset "utf-8";
+/* CSS Document */
+/*all styles defined inside class .cc (course content)*/
+#jlms_mainarea {
+    color: #666666;
+    font: 62.5% Verdana;
+}
+#jlms_mainarea  p, #jlms_mainarea table{
+	font-size:12px;
+	line-height:18px;
+}
+.cc {font-size:12px; line-height:18px; padding:30px 0 20px;}
+
+/*headers*/
+.cc h1, .cc h2, .cc h3, .cc h4, .cc h5, .cc h6 {margin:1em 0 0.5em;padding:0; background:none; width:auto; font-family: 'Verdana';}
+.cc h1 {font-size:20px;line-height:1.5em; color:#0063B1; text-align: left;}
+.cc h2 {font-size:18px;line-height:1.5em; color:#0063B1;}
+.cc h3 {font-size:16px;line-height:1.5em; color:#0063B1;}
+.cc h4 {font-size:14px;line-height:1.5em;}
+.cc h5 {font-size:14px;line-height:1.5em;}
+.cc h6 {font-size:12px;line-height:1.5em;}
+
+/*quotes*/
+.cc blockquote {border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; color: #666; padding:0.5em 0;}
+.cc blockquote *:first-child:before {content: "\201C";}
+.cc blockquote *:last-child:after {content: "\201D";}
+.cc q {quotes: "\201C" "\201D" "\2018" "\2019"} /* default ... ... ... */
+.cc q:lang(en) {quotes: "\201C" "\201D" "\2018" "\2019"} /* ... ... ... */
+
+/*basic typography*/
+.cc p {text-align:left;}
+.cc cite, .cc em, .cc dfn { font-style: italic; }
+.cc code, .cc kbd, .cc samp, .cc pre, .cc tt, .cc var { /*font-size: 92%;*/ font-family: monaco, "Lucida Console", courier, monospace; color:#000; }
+.cc del {text-decoration: line-through; color: #666;}
+.cc ins, .cc dfn {border-bottom: 1px solid;}
+.cc small, .cc sup, .cc sub {font-size: 85%;}
+.cc big {font-size: 150%;}
+.cc abbr, .cc acronym {text-transform: uppercase; font-size: 85%; letter-spacing: .1em;}
+.cc a abbr, .cc a acronym {border: none;}
+.cc abbr[title], .cc  acronym[title], .cc dfn[title], .pseudolink {cursor: help; border-bottom: 1px dashed #0063B1 !important;}
+.cc sup {vertical-align: super;}
+.cc sub {vertical-align: sub;}
+.cc dt {font-weight:bold; /*float:left;*/ padding-right:1em;}
+.cc dd {margin: 0 0 1.5em 3em;}
+.cc hr {background:#ddd;color:#ddd;clear:both;float:none;width:100%;height:1px;margin:0 0 1.45em;border:none;}
+
+/* TABLES */
+.cc table { border-top: 1px solid #ccc;  border-left: 1px solid #ccc; border-collapse: collapse; margin:1em 0 1.5em; }
+.cc table th, .cc table td { border-bottom: 1px solid #ddd; border-right: 1px solid #ccc; vertical-align:top; padding:5px;}
+.cc table.layout { border:none;margin:0;}
+.cc table.layout th, .cc table.layout td { border:none;padding:0;vertical-align:top; text-align:left; font-weight:normal;}
+
+/* TEXT CLASSES */
+
+.fancy {font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif; font-style: italic; font-weight: normal; }  /* Creates fancy serif style type */
+.thin {font-weight: lighter;}
+.b {font-weight:bold;}
+.small {font-size:.8em;margin-bottom:1.875em;line-height:1.875em;}
+.large {font-size:1.2em;line-height:2.5em;margin-bottom:1.25em;}
+.hide {display:none;}
+.quiet {color:#666;}
+.loud {color:#000;}
+.highlight {background:#E1F9DF;}
+.nowrap {white-space:nowrap;}
+/* notices */
+.error, .notice, .success , .info {padding:.8em;margin-bottom:1.6em;border:2px solid #ddd;}
+.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
+.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
+.info {background:#E3F0FB;color:#11548A;border-color:#C2E1FB;}
+.error a {color:#8a1f11; background:none; padding:0; margin:0; }
+.notice a {color:#514721; background:none; padding:0; margin:0; }
+.success a {color:#264409; background:none; padding:0; margin:0; }
+.info a {color:#11548A; background:none; padding:0; margin:0;}
+
+/*justification*/
+.jf {text-align:justify;}
+.jf-left { text-align: left; }
+.jf-right { text-align: right; }
+.jf-center { text-align: center; }
+.absmiddle {vertical-align:middle;}
+
+.indent { text-indent: 2em; }/* Indented line*/
+.caps { text-transform: uppercase; }/* Capitals */
+.scaps { font-variant: small-caps; }/* Small capitals */
+.fletter { font-size: 2em; }/* First letter */
+span.dropcap { float: left; font-size: 3em; line-height:1em; padding-right: 0.2em; }/* Dropcap */
+span.fbox { font-weight: bold; float: left; background: #f6f6f6; border: solid 1px #e5e5e5; padding: 0.1em 0.4em; margin: 0 0.5em 0.5em 0; }/* Float box */
+
+
+.cc_tip {font-size:11px; line-height:18px; text-align:left; color:#7A7A7A; background: url(../images/64x64_leuchte.png) no-repeat 0px -5px; padding-left:65px; min-height: 60px;}
+.cc_help {font-size:11px; line-height:18px; text-align:left; color:#7A7A7A; background: url(../images/64x64_hilfe.png) no-repeat 0px 5px; padding-left:65px;}
+.cc_question {background: url(../images/64x64_faq.png) no-repeat 0px 5px; padding-left:65px;}
+.cc_image_placeholder {background:#EEE; display:block; text-align:center;}
+.cc_step-by-step {margin:0;padding:0; list-style:none;}
+.cc_step-by-step li {display:block;margin:0;padding:0; overflow:hidden;width:100%;}
+.cc_step-by-step li span {display:block; width:50px; float:left;clear:left; background:#E1E1E1; color:#57B344; text-align:center; font-size:30px; line-height:40px; text-shadow:1px 1px 0 #39752D;}
+.cc_step-by-step li span em {display:block; width:0px; border-top:10px solid #E1E1E1; border-left:25px solid #FFF; border-right:25px solid #FFF;}
+.cc_step-by-step li span strong {display:block; width:0px; border-top:10px solid #FFF; border-left:25px solid #E1E1E1; border-right:25px solid #E1E1E1;}
+.cc_step-by-step li p {float:left; width:150px;padding-left:10px; clear:right; text-align:left; font-size:12px; line-height:1.2em; margin-top:0px; color:#707070;}
+/*active*/
+.cc_step-by-step li.active span{background:#57B344;color:#FFF;}
+.cc_step-by-step li.active span em{border-top-color:#57B344;}
+.cc_step-by-step li.active span strong {border-left-color:#57B344; border-right-color:#57B344;}
+.cc_step-by-step li.active p{color:#3D3D3D; font-size:14px;width:150px;}
+/*shaded*/
+.cc_step-by-step li.shaded span{background:#F2F2F2;color:#FFF; text-shadow:-1px -1px 0 #EBEBEB;}
+.cc_step-by-step li.shaded span em{border-top-color:#F2F2F2;}
+.cc_step-by-step li.shaded span strong {border-left-color:#F2F2F2; border-right-color:#F2F2F2;}
+.cc_step-by-step li.shaded p{color:#E6E6E6;}
+/*hover*/
+.cc_step-by-step li.shaded:hover span{background:#DEDEDE;color:#FFF; text-shadow:-1px -1px 0 #CFCFCF;}
+.cc_step-by-step li.shaded:hover span em{border-top-color:#DEDEDE;}
+.cc_step-by-step li.shaded:hover span strong {border-left-color:#DEDEDE; border-right-color:#DEDEDE;}
+.cc_step-by-step li.shaded:hover p{color:#B5B5B5;}
+
+
+/*browsers*/
+.cc_t_arr_block {font-size:9px !important; color:#CCC;}
+.cc_ff         {padding-top:50px; width:70px !important; background: url(../images/firefox_48.png) no-repeat top center;}
+.cc_safari {padding-top:50px; width:70px !important; background: url(../images/safari_48.png) no-repeat top center;}
+.cc_chrome {padding-top:50px; width:70px !important; background: url(../images/chrome_48.png) no-repeat top center;}
+.cc_opera   {padding-top:50px; width:70px !important; background: url(../images/opera_48.png) no-repeat top center;}
+.cc_ie         {padding-top:50px; background: url(../images/ie_48.png) no-repeat top center;}
+
+/* TEXT CLASSES end */
+
+/*erasers*/
+.erase-top {margin-top:0 !important;padding-top:0 !important;}
+.erase-bottom {margin-bottom:0 !important;padding-bottom:0 !important;}
+.erase-float {float: none !important;}
+.erase-bullets {list-style:none;}
+/**/
+
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_12 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 780px;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.com_joomla_lms .grid_1,
+.com_joomla_lms .grid_2,
+.com_joomla_lms .grid_3,
+.com_joomla_lms .grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {margin-left: 0;}
+.omega {margin-right: 0;}
+
+/* Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .grid_1 {width:45px;}
+.container_12 .grid_2 {width:110px;}
+.container_12 .grid_3 {width:175px;}
+.container_12 .grid_4 {width:220px;}
+.container_12 .grid_5 {width:305px;}
+.container_12 .grid_6 {width:370px;}
+.container_12 .grid_7 {width:435px;} 
+.container_12 .grid_8 {width:500px;}
+.container_12 .grid_9 {width:565px;}
+.container_12 .grid_10 {width:630px;}
+/*.container_12 .grid_11 {width:695px;}*/
+.container_12 .grid_12 {width:760px;}
+
+.container_12 .grid_7.wide_width,  
+.container_12 .grid_8.wide_width {
+	width:100%;
+}
+.container_12 .suffix_4.wide_width {
+    padding-right: 0;
+}
+
+
+/* Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .prefix_1 {padding-left:65px;}
+.container_12 .prefix_2 {padding-left:130px;}
+.container_12 .prefix_3 {padding-left:195px;}
+.container_12 .prefix_4 {padding-left:260px;}
+.container_12 .prefix_5 {padding-left:325px;}
+.container_12 .prefix_6 {padding-left:390px;}
+.container_12 .prefix_7 {padding-left:455px;}
+.container_12 .prefix_8 {padding-left:520px;}
+.container_12 .prefix_9 {padding-left:585px;}
+.container_12 .prefix_10 {padding-left:650px;}
+.container_12 .prefix_11 {padding-left:715px;}
+
+
+/* Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .suffix_1 {padding-right:65px;}
+.container_12 .suffix_2 {padding-right:130px;}
+.container_12 .suffix_3 {padding-right:195px;}
+.container_12 .suffix_4 {padding-right:260px;}
+.container_12 .suffix_5 {padding-right:325px;}
+.container_12 .suffix_6 {padding-right:390px;}
+.container_12 .suffix_7 {padding-right:455px;}
+.container_12 .suffix_8 {padding-right:520px;}
+.container_12 .suffix_9 {padding-right:585px;}
+.container_12 .suffix_10 {padding-right:650px;}
+.container_12 .suffix_11 {padding-right:715px;}
+
+
+/* Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .push_1 {left:65px;}
+.container_12 .push_2 {left:130px;}
+.container_12 .push_3 {left:195px;}
+.container_12 .push_4 {left:260px;}
+.container_12 .push_5 {left:325px;}
+.container_12 .push_6 {left:390px;}
+.container_12 .push_7 {left:455px;}
+.container_12 .push_8 {left:520px;}
+.container_12 .push_9 {left:585px;}
+.container_12 .push_10 {left:650px;}
+.container_12 .push_11 {left:715px;}
+
+
+/* Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .pull_1 {left:-65px;}
+.container_12 .pull_2 {left:-130px;}
+.container_12 .pull_3 {left:-195px;}
+.container_12 .pull_4 {left:-260px;}
+.container_12 .pull_5 {left:-325px;}
+.container_12 .pull_6 {left:-390px;}
+.container_12 .pull_7 {left:-455px;}
+.container_12 .pull_8 {left:-520px;}
+.container_12 .pull_9 {left:-585px;}
+.container_12 .pull_10 {left:-650px;}
+.container_12 .pull_11 {left:-715px;}
+
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+.cc_wrap {overflow: hidden;}
+* html .cc_wrap {height:1%;}
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {	clear: both;display: block;overflow: hidden;visibility: hidden;width: 0;height: 0;}
+.clear-l {clear:left;}
+.clear-r {clear:right;}
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {clear: both;content: ' ';display: block;font-size: 0;line-height: 0;visibility: hidden;width: 0;height: 0;}
+
+.clearfix {display: inline-block;}
+* html .clearfix {	height: 1%;}
+.clearfix {display: block;}
+
+/**/
+/* Tooltips */
+.tool-tip {float: left;background: #ffc; border: 1px solid #D4D5AA; padding: 10px; max-width: 250px; border-radius: 3px; -moz-border-radius: 3px;-webkit-border-radius: 3px; box-shadow: 2px 2px 4px #CCC; -moz-box-shadow: 2px 2px 4px #CCC; -webkit-box-shadow: 2px 2px 4px #CCC;}
+ 
+.tool-title { padding: 0; margin: 0; font-size: 11px; font-weight: bold; margin-top: -20px; padding-top: 15px; padding-bottom: 5px; background: url(../images/selector-arrow.png) no-repeat;}
+ 
+.tool-text { font-size: 10px; margin: 0;}
+
+/*style for course*/
+.com_joomla_lms label, .com_joomla_lms input, .com_joomla_lms button, .com_joomla_lms select, .com_joomla_lms textarea {
+    font-size: 12px;
+}
+.com_joomla_lms label {
+	margin-bottom:0;
+}
+.com_joomla_lms .grid-box {
+    font-size: 12px;
+}
+.com_joomla_lms p {
+    margin: 0;
+    padding: 2px 0 7px;
+}
+.cc_tip p {
+    font-size: 11px;
+}
+.container_12 .suffix_1 {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+.componentheading, .contentheading h2 {
+    color: #0063B1;
+    font-size: 1.3em;
+    letter-spacing: normal;
+    margin: 0;
+    text-align: left;
+	font-weight: bold;
+}
+.com_joomla_lms input[type="radio"], .com_joomla_lms input[type="checkbox"] {
+	margin: 0 0 3px;
+}
+.chzn-container {
+    font-family: 'Open sans';
+}
+#cont div.jq_drop {
+    height: auto !important;
+}
+.container_12 .grid_11.alpha.wide_width {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+/***/

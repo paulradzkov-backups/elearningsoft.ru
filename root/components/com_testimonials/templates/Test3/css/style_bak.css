@@ -1,0 +1,105 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.wid_50 {
+	width: 45%;
+	margin: 0 2.5%;
+	float: left;
+}
+.wid_25 {
+	width: 20%;
+	margin: 0 2.5%;
+	float: left;
+}
+.testimonial_image {
+	position: relative;
+	float: left;
+	margin: 0 0 20px 0 !important;
+	padding: 0 2.5%;
+	width: 20%;
+}
+.testimonial_image > img {
+	margin: 0 auto !important;
+	display: block;
+	max-width: 100%;
+	border: 1px solid #a29c9e;
+	
+	-moz-box-shadow: 2px 0px 3px rgba(0,0,0,0.4); /* Для Firefox */
+	-webkit-box-shadow: 2px 0px 3px rgba(0,0,0,0.4); /* Для Safari и Chrome */
+	box-shadow: 2px 0px 3px rgba(0,0,0,0.4); /* Параметры тени */
+	
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-o-border-radius: 5px 5px 5px 5px;
+	border-radius:  5px 5px 5px 5px;
+	
+}
+.testimonial_inner {
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.43) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.43))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.43) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.43) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.43) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.43) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#6e000000',GradientType=0 ); /* IE6-9 */
+
+
+	-webkit-border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-o-border-radius: 15px 15px 15px 15px;
+	border-radius:  15px 15px 15px 15px;
+}
+.testimonial_inner > * {
+	margin: 0 0 0 25%;
+}
+.testimonial {
+	margin: 20px auto;
+	color: #413d3e;
+	font-family: "Tw Cen MT";
+	
+	border: 1px solid #b2b2b2;
+	padding: 10px;
+	
+	-webkit-border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	-o-border-radius: 20px 20px 20px 20px;
+	border-radius:  20px 20px 20px 20px;
+	
+	-moz-box-shadow: 2px 3px 3px rgba(0,0,0,0.2); /* Для Firefox */
+	-webkit-box-shadow: 2px 3px 3px rgba(0,0,0,0.2); /* Для Safari и Chrome */
+	box-shadow: 2px 3px 3px rgba(0,0,0,0.2); /* Параметры тени */
+}
+
+.testimonial a {
+	color: #413d3e;
+}
+.testimonial a:hover {
+	text-decoration: none;
+}
+.testimonial_author_descr {
+	color: #383435;
+	padding-bottom: 20px;
+}
+.testimonial_author {
+	color: #040304;
+	font-weight: bold;
+}
+p {
+	margin-right: 5% !important;
+}
+.testimonial_inner h4 {
+	color: #2a2728;
+	margin-top: 0;
+	padding-top: 20px; 
+}
+
+.imagelist{
+    
+    list-style: none;
+    }
+.imagelist li{
+       
+        margin: 3px;
+        float: left;
+        }

@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.wid_50 {
+	width: 45%;
+	margin: 0 2.5%;
+	float: left;
+}
+.wid_25 {
+	width: 20%;
+	margin: 0 2.5%;
+	float: left;
+}
+.testimonial_image {
+	float: left;
+	margin: 0 0 20px 0 !important;
+	padding: 0 2.5%;
+	width: 20%;
+}
+.testimonial_image > img {
+	margin: 0 auto !important;
+	display: block;
+	max-width: 100%;
+	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Для Firefox */
+	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Параметры тени */
+}
+.testimonial_inner {
+	padding: 1px 0;
+}
+.testimonial_inner > * {
+	margin: 0 0 0 30%;
+}
+.testimonial {
+	position: relative;
+	border: 1px solid #ece7e0;
+	width: 100%;
+	margin: 20px auto;
+	color: #413d3e;
+	font-family: "Tw Cen MT";
+	
+	-moz-box-shadow: 2px 3px 3px rgba(0,0,0,0.2); /* Для Firefox */
+	-webkit-box-shadow: 2px 3px 3px rgba(0,0,0,0.2); /* Для Safari и Chrome */
+	box-shadow: 2px 3px 3px rgba(0,0,0,0.2); /* Параметры тени */
+}
+.testimonial a {
+	color: #040304;
+}
+.testimonial a:hover {
+	text-decoration: none;
+}
+.testimonial:before {
+	position: absolute;
+	content: "";
+	width: 25%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	border-right: 1px solid #ece7e0;
+	
+	-moz-box-shadow: 1px 0 2px rgba(0,0,0,0.1); /* Для Firefox */
+	-webkit-box-shadow: 1px 0 2px rgba(0,0,0,0.1); /* Для Safari и Chrome */
+	box-shadow: 1px 0 2px rgba(0,0,0,0.1); /* Параметры тени */
+	
+	background: #fbfbf9; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fbfbf9 14%, #f4efe9 81%, #f4efe9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(14%,#fbfbf9), color-stop(81%,#f4efe9), color-stop(100%,#f4efe9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fbfbf9 14%,#f4efe9 81%,#f4efe9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fbfbf9 14%,#f4efe9 81%,#f4efe9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fbfbf9 14%,#f4efe9 81%,#f4efe9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fbfbf9 14%,#f4efe9 81%,#f4efe9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbf9', endColorstr='#f4efe9',GradientType=0 ); /* IE6-9 */
+	
+	z-index: -1;
+}
+.testimonial_author_descr {
+	margin-bottom: 20px;
+}
+.testimonial_author {
+	font-weight: bold;
+}
+.imagelist{
+    display: block;
+    list-style: none;
+    }
+.imagelist li{
+        display: block;
+        margin: 3px;
+        float: left;
+}
+
+p {
+	margin-right: 5% !important;
+}

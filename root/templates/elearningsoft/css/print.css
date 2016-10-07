@@ -1,0 +1,67 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@media print {
+	
+	* {
+		background: transparent !important;
+		color: black !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important;
+	}
+	
+	a, a:visited { text-decoration: underline; }
+	
+	pre, blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	
+	thead { display: table-header-group; }
+	
+	tr, img { page-break-inside: avoid; }
+	
+	img { max-width: 100% !important; }
+	
+	@page { margin: 0.5cm; }
+	
+	p, h2, h3 { orphans: 3; widows: 3; }
+	
+	h1, h2, h3 { page-break-after: avoid; }
+	
+
+    .page-logo {
+        float: none;
+        margin: auto;
+    }
+    .mainmenu,
+    .sitemap,
+    #top-a,
+    #breadcrumbs,
+    .on-page-nav,
+    .product-actions,
+    .pagination,
+    nav
+    {
+        display: none;
+    }
+    .paper,
+    #system,
+    .page-body {
+        margin: 0 auto;
+        width: 880px;
+        padding: 0;
+    }
+    .product-details > .grid_3 {
+        padding: 20px;
+        width:840px;
+    }
+    .product-description {
+        width:620px;
+    }
+
+    a[href]:after {
+		content: "";
+	}
+}

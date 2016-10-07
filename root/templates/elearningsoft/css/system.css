@@ -1,0 +1,38 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@import url(../warp/css/system.css);
+@import url(../warp/systems/joomla/css/system.css);
+@import url(system-all.css);
+
+
+/* Items (Addition)
+----------------------------------------------------------------------------------------------------*/
+#system .items .leading .item,
+#system .items .item {
+	padding-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 59px;
+	border-bottom: 1px solid #ececfb;
+}
+
+#system .item > header {
+	margin-bottom: 20px;
+}
+
+#system .title a {
+	text-decoration: underline;
+	color: #006CD8;
+}
+#system .title a:hover {
+    color: #000;
+}
+/* Item List
+----------------------------------------------------------------------------------------------------*/
+
+#system .item-list { border-top: 1px solid #ddd; }
+
+
+/* Search
+----------------------------------------------------------------------------------------------------*/
+
+#system span.highlight { background-color: transparent; }
